@@ -27,7 +27,7 @@ Dataset can be downloaded from http://deepgo.bio2vec.net/data/deepgo/data.tar.gz
 + data/train/test-cc.pkl
 + data/train/test-mf.pkl
 
-### Code:
+### Models:
 
 All the trained models are saved in models folder with the following naming convention:
 
@@ -38,6 +38,8 @@ All the trained models are saved in models folder with the following naming conv
 + gram_len: n for n-gram
 + embedding_size: size of embedding vector v
 + run: run number
+
+### Code:
 
 - baseline.py runs my implementation of the baseline model. You can change the main function default parameters. model_name is baseline.
 - baseline_experiments.py runs the experiments of the baseline model and the results are saved in results_baseline_<number of epochs>.csv. model_name is baseline_exp.
