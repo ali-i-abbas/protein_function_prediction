@@ -42,13 +42,13 @@ All the trained models are saved in models folder with the following naming conv
 ### Code:
 
 - baseline.py runs my implementation of the baseline model. You can change the main function default parameters. model_name is baseline.
-- baseline_experiments.py runs the experiments of the baseline model and the results are saved in results_baseline_<number of epochs>.csv. model_name is baseline_exp.
+- baseline_experiments.py runs the experiments of the baseline model and the results are saved in results_baseline_{number of epochs}.csv. model_name is baseline_exp.
 - chemical.py runs my implementation of the baseline model with augmented chemical properties of the amino acids. You can change the main function default parameters. model_name is chemical.
-- chemical_experiments.py runs the experiments of the baseline model with augmented chemical properties of the amino acids and the results are saved in results_chemical_<number of epochs>.csv. model_name is chemical_exp.
+- chemical_experiments.py runs the experiments of the baseline model with augmented chemical properties of the amino acids and the results are saved in results_chemical_{number of epochs}.csv. model_name is chemical_exp.
 - tpe_model.py runs my implementation of the TPE model. You can change the main function default parameters. model_name is tpe.
-- tpe_model_experiments.py runs the experiments of the TPE model and the results are saved in results_tpe_<number of epochs>.csv. model_name is tpe_exp.
+- tpe_model_experiments.py runs the experiments of the TPE model and the results are saved in results_tpe_{number of epochs}.csv. model_name is tpe_exp.
 - bottleneck_model.py runs my implementation of the bottleneck model. You can change the main function default parameters. model_name is bottleneck.
-- bottleneck_model_experiments.py runs the experiments of the bottleneck model and the results are saved in results_bottleneck_<number of epochs>.csv. model_name is bottleneck_exp.
+- bottleneck_model_experiments.py runs the experiments of the bottleneck model and the results are saved in results_bottleneck_{number of epochs}.csv. model_name is bottleneck_exp.
 
 
 - tpe_params.py runs the TPE algorithm to search for hyperparameters. the best model is saved in params folder. All the parameters are saved in parameters.csv and parameters.pkl. The trials are saved in hyperopt_trials.pkl, which can be used to resume the search. The best found parameters are saved in best_param.log.
