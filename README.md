@@ -31,7 +31,7 @@ Dataset can be downloaded from http://deepgo.bio2vec.net/data/deepgo/data.tar.gz
 
 All the trained models are saved in models folder with the following naming convention:
 
-<model_name>_<encoding>_<subontology>_e<nb_epoch>_b<batch_size>_n<gram_len>_v<embedding_size>_r<run>.h5
+{model_name}_{encoding}_{subontology}_e{nb_epoch}_b{batch_size}_n{gram_len}_v{embedding_size}_r{run}.h5
 
 + encoding can be 'oh' for one-hot encoding or 'ad' for ad-hoc trainable embedding
 + subontology: ['cc', 'mf', 'bp']
