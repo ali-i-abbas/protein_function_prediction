@@ -16,16 +16,16 @@ Recently, Zuallaert et al., 2019, studied the effects of different encoding stra
 
 Dataset can be downloaded from http://deepgo.bio2vec.net/data/deepgo/data.tar.gz. Extract and copy the following files to data folder:
 
-data/go.obo
-data/train/bp.pkl
-data/train/cc.pkl
-data/train/mf.pkl
-data/train/train-bp.pkl
-data/train/train-cc.pkl
-data/train/train-mf.pkl
-data/train/test-bp.pkl
-data/train/test-cc.pkl
-data/train/test-mf.pkl
++ data/go.obo
++ data/train/bp.pkl
++ data/train/cc.pkl
++ data/train/mf.pkl
++ data/train/train-bp.pkl
++ data/train/train-cc.pkl
++ data/train/train-mf.pkl
++ data/train/test-bp.pkl
++ data/train/test-cc.pkl
++ data/train/test-mf.pkl
 
 ### Code:
 
@@ -33,25 +33,25 @@ All the trained models are saved in models folder with the following naming conv
 
 <model_name>_<encoding>_<subontology>_e<nb_epoch>_b<batch_size>_n<gram_len>_v<embedding_size>_r<run>.h5
 
--encoding can be 'oh' for one-hot encoding or 'ad' for ad-hoc trainable embedding
--subontology: ['cc', 'mf', 'bp']
--gram_len: n for n-gram
--embedding_size: size of embedding vector v
--run: run number
++ encoding can be 'oh' for one-hot encoding or 'ad' for ad-hoc trainable embedding
++ subontology: ['cc', 'mf', 'bp']
++ gram_len: n for n-gram
++ embedding_size: size of embedding vector v
++ run: run number
 
--baseline.py runs my implementation of the baseline model. You can change the main function default parameters. model_name is baseline.
--baseline_experiments.py runs the experiments of the baseline model and the results are saved in results_baseline_<number of epochs>.csv. model_name is baseline_exp.
--chemical.py runs my implementation of the baseline model with augmented chemical properties of the amino acids. You can change the main function default parameters. model_name is chemical.
--chemical_experiments.py runs the experiments of the baseline model with augmented chemical properties of the amino acids and the results are saved in results_chemical_<number of epochs>.csv. model_name is chemical_exp.
--tpe_model.py runs my implementation of the TPE model. You can change the main function default parameters. model_name is tpe.
--tpe_model_experiments.py runs the experiments of the TPE model and the results are saved in results_tpe_<number of epochs>.csv. model_name is tpe_exp.
--bottleneck_model.py runs my implementation of the bottleneck model. You can change the main function default parameters. model_name is bottleneck.
--bottleneck_model_experiments.py runs the experiments of the bottleneck model and the results are saved in results_bottleneck_<number of epochs>.csv. model_name is bottleneck_exp.
+- baseline.py runs my implementation of the baseline model. You can change the main function default parameters. model_name is baseline.
+- baseline_experiments.py runs the experiments of the baseline model and the results are saved in results_baseline_<number of epochs>.csv. model_name is baseline_exp.
+- chemical.py runs my implementation of the baseline model with augmented chemical properties of the amino acids. You can change the main function default parameters. model_name is chemical.
+- chemical_experiments.py runs the experiments of the baseline model with augmented chemical properties of the amino acids and the results are saved in results_chemical_<number of epochs>.csv. model_name is chemical_exp.
+- tpe_model.py runs my implementation of the TPE model. You can change the main function default parameters. model_name is tpe.
+- tpe_model_experiments.py runs the experiments of the TPE model and the results are saved in results_tpe_<number of epochs>.csv. model_name is tpe_exp.
+- bottleneck_model.py runs my implementation of the bottleneck model. You can change the main function default parameters. model_name is bottleneck.
+- bottleneck_model_experiments.py runs the experiments of the bottleneck model and the results are saved in results_bottleneck_<number of epochs>.csv. model_name is bottleneck_exp.
 
 
--tpe_params.py runs the TPE algorithm to search for hyperparameters. the best model is saved in params folder. All the parameters are saved in parameters.csv and parameters.pkl. The trials are saved in hyperopt_trials.pkl, which can be used to resume the search. The best found parameters are saved in best_param.log.
+- tpe_params.py runs the TPE algorithm to search for hyperparameters. the best model is saved in params folder. All the parameters are saved in parameters.csv and parameters.pkl. The trials are saved in hyperopt_trials.pkl, which can be used to resume the search. The best found parameters are saved in best_param.log.
 
--Final.R is R script used to generate graphs and do statistics on results.
+- Final.R is R script used to generate graphs and do statistics on results.
 
 
 
