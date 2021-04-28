@@ -1,7 +1,7 @@
 # Sequence-based protein function prediction using convolutional neural networks
 
 
-This is my final project for CAP6545. Please refer to my final report for more details.
+This is my final project for CAP6545. Please refer to my final report (Sequence_based_protein_function_prediction_using_convolutional_neural_networks___Ali_Abbas.pdf) for more details.
 
 ### Motivation: 
 
