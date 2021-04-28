@@ -3,16 +3,16 @@
 
 This is my final project for CAP6545. Please refer to my final report for more details.
 
-###Motivation: 
+### Motivation: 
 
 Genome sequencing advances in recent years have resulted in huge amounts of protein sequence data. To make use of such data, we first need to map each protein sequence to relevant biological processes, cellular components, or molecular functions. This is known as Gene Ontology (GO) term annotation prediction problem. In other words, the problem is that given a protein sequence data as input, how to predict its GO term annotations. Manual labeling of data is very time consuming so we need to automate this process.
 
  
-###Results: 
+### Results: 
 
 Recently, Zuallaert et al., 2019, studied the effects of different encoding strategies on protein function prediction performance using a Convolutional Neural Network (CNN). I reimplemented a reduced scope of their work by selecting only one-hot encoded and ad-hoc trainable embeddings encoding strategies and dropping trigrams. I was unable to get the same results despite using the same parameters but got the same trends of seeing simpler encodings performing better. Next, in order to improve the results, I augmented the unigram one-hot encoded input with six chemical properties of the amino acids and got slightly better results than my first implementation, especially for BP and MF functions, which might be due to BP and MF having stronger correlation to chemical properties of amino acids compared to CC. Then, in order to further improve my results, I used the Tree-structured Parzen estimators (TPE) to search for best hyperparameters, which resulted in better performance but still not matching the original paper’s results. Finally, I used a bottleneck model and was able to match the original paper’s results for CC functions, and get to 1.2% distance from MF results. The final model’s improved results could be due to introducing an information bottleneck before the last layer which causes the model to learn to generalize from limited data.
 
-###Dataset:
+### Dataset:
 
 Dataset can be downloaded from http://deepgo.bio2vec.net/data/deepgo/data.tar.gz. Extract and copy the following files to data folder:
 
@@ -27,7 +27,7 @@ data/train/test-bp.pkl
 data/train/test-cc.pkl
 data/train/test-mf.pkl
 
-###Code:
+### Code:
 
 All the trained models are saved in models folder with the following naming convention:
 
@@ -56,6 +56,6 @@ All the trained models are saved in models folder with the following naming conv
 
 
 
-###References
+### References
 
-1- Zuallaert, J., Pan, X., Saeys, Y., Wang, X., & De Neve, W. (2019). Investigating the biological relevance in trained embedding representations of protein sequences. In Workshop on Computational Biology at the 36th International Conference on Machine Learning (ICML 2019).
+Zuallaert, J., Pan, X., Saeys, Y., Wang, X., and De Neve, W. (2019).  Investigatingthe biological relevance in trained embedding representations of protein sequences.InWorkshop on Computational Biology at the 36th International Conference onMachine Learning (ICML 2019).
